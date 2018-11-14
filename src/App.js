@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Button } from "./components/Button";
-import { Input } from "./components/Input"
-import { Clear } from "./components/Clear"
+import { Input } from "./components/Input";
+import { Clear } from "./components/Clear";
+import * as math from "mathjs";
 
 class App extends Component {
   constructor(props) {
@@ -17,6 +18,11 @@ class App extends Component {
     this.setState({input: this.state.input + inn});
   }
 
+  equals = () => {
+    this.setState({ input: math.eval(this.state.input) });
+  };
+
+  // clear =
 
   render() {
     return (
@@ -44,7 +50,7 @@ class App extends Component {
           <div className="row">
             <Button handleClick={this.addInput}> 0 </Button>
             <Button handleClick={this.addInput}> . </Button>
-            <Button handleClick={this.addInput}> = </Button>
+            <Button handleClick={() => this.equals()}>=</Button>
             <Button handleClick={this.addInput}> + </Button>
           </div>
           <div className="row">
