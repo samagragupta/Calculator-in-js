@@ -22,7 +22,9 @@ class App extends Component {
     this.setState({ input: math.eval(this.state.input) });
   };
 
-  // clear =
+  clears = () => {
+    this.setState({input: ""})
+  }
 
   render() {
     return (
@@ -30,31 +32,31 @@ class App extends Component {
         <div className="wrapper">
           <Input input={this.state.input}>1</Input>
           <div className="row">
-            <Button handleClick={this.addInput}> 7 </Button>
-            <Button handleClick={this.addInput}> 8 </Button>
-            <Button handleClick={this.addInput}> 9 </Button>
-            <Button handleClick={this.addInput}> / </Button>
+            <Button handleClick={this.addInput}>7</Button>
+            <Button handleClick={this.addInput}>8</Button>
+            <Button handleClick={this.addInput}>9</Button>
+            <Button handleClick={this.addInput}>/</Button>
           </div>
           <div className="row">
-            <Button handleClick={this.addInput}> 4 </Button>
-            <Button handleClick={this.addInput}> 5 </Button>
-            <Button handleClick={this.addInput}> 6 </Button>
-            <Button handleClick={this.addInput}> * </Button>
+            <Button handleClick={this.addInput}>4</Button>
+            <Button handleClick={this.addInput}>5</Button>
+            <Button handleClick={this.addInput}>6</Button>
+            <Button handleClick={this.addInput}>*</Button>
           </div>
           <div className="row">
-            <Button handleClick={this.addInput}> 1 </Button>
-            <Button handleClick={this.addInput}> 2 </Button>
-            <Button handleClick={this.addInput}> 3 </Button>
-            <Button handleClick={this.addInput}> - </Button>
+            <Button handleClick={this.addInput}>1</Button>
+            <Button handleClick={this.addInput}>2</Button>
+            <Button handleClick={this.addInput}>3</Button>
+            <Button handleClick={this.addInput}>-</Button>
           </div>
           <div className="row">
-            <Button handleClick={this.addInput}> 0 </Button>
-            <Button handleClick={this.addInput}> . </Button>
-            <Button handleClick={() => this.equals()}>=</Button>
-            <Button handleClick={this.addInput}> + </Button>
+            <Button handleClick={this.addInput}>0</Button>
+            <Button handleClick={this.addInput}>.</Button>
+            <Button handleClick={this.equals}>=</Button>
+            <Button handleClick={this.addInput}>+</Button>
           </div>
           <div className="row">
-            <Clear>
+            <Clear handleClick={this.clears}>
               Clear
             </Clear>
           </div>
