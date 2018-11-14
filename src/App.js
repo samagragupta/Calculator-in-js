@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Button } from "./components/Button";
 import { Input } from "./components/Input"
+import { Clear } from "./components/Clear"
 
 // this.state{
 //   input=""
@@ -36,6 +37,11 @@ class App extends Component {
             <Button> . </Button>
             <Button> = </Button>
             <Button> + </Button>
+          </div>
+          <div className="row">
+            <Clear>
+              Clear
+            </Clear>
           </div>
         </div>
       </div>
