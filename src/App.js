@@ -4,39 +4,48 @@ import { Button } from "./components/Button";
 import { Input } from "./components/Input"
 import { Clear } from "./components/Clear"
 
-// this.state{
-//   input=""
-// }
-
 class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      input: ""
+    };
+  }
+
+  addInput = inn => {
+    this.setState({input: this.state.input + inn});
+  }
+
+
   render() {
     return (
       <div className="app">
         <div className="wrapper">
-          <Input>1</Input>
+          <Input input={this.state.input}>1</Input>
           <div className="row">
-            <Button> 7 </Button>
-            <Button> 8 </Button>
-            <Button> 9 </Button>
-            <Button> / </Button>
+            <Button handleClick={this.addInput}> 7 </Button>
+            <Button handleClick={this.addInput}> 8 </Button>
+            <Button handleClick={this.addInput}> 9 </Button>
+            <Button handleClick={this.addInput}> / </Button>
           </div>
           <div className="row">
-            <Button> 4 </Button>
-            <Button> 5 </Button>
-            <Button> 6 </Button>
-            <Button> * </Button>
+            <Button handleClick={this.addInput}> 4 </Button>
+            <Button handleClick={this.addInput}> 5 </Button>
+            <Button handleClick={this.addInput}> 6 </Button>
+            <Button handleClick={this.addInput}> * </Button>
           </div>
           <div className="row">
-            <Button> 1 </Button>
-            <Button> 2 </Button>
-            <Button> 3 </Button>
-            <Button> - </Button>
+            <Button handleClick={this.addInput}> 1 </Button>
+            <Button handleClick={this.addInput}> 2 </Button>
+            <Button handleClick={this.addInput}> 3 </Button>
+            <Button handleClick={this.addInput}> - </Button>
           </div>
           <div className="row">
-            <Button> 0 </Button>
-            <Button> . </Button>
-            <Button> = </Button>
-            <Button> + </Button>
+            <Button handleClick={this.addInput}> 0 </Button>
+            <Button handleClick={this.addInput}> . </Button>
+            <Button handleClick={this.addInput}> = </Button>
+            <Button handleClick={this.addInput}> + </Button>
           </div>
           <div className="row">
             <Clear>
