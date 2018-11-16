@@ -10,3 +10,9 @@
   flex: 1;
   font-size: 1.5em;
 }
+
+.button:active {
+  background-color: Yellow;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
