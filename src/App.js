@@ -4,6 +4,7 @@ import { Button } from "./components/Button";
 import { Input } from "./components/Input";
 import { Clear } from "./components/Clear";
 import * as math from "mathjs";
+document.body.style.backgroundColor = "Black";
 
 class App extends Component {
   constructor(props) {
